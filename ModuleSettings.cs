@@ -10,27 +10,27 @@ namespace BhModule.PathingMapAlignPlugin
 {
     public class ModuleSettings
     {
-        public SettingEntry<int> X { get; private set; }
-        public SettingEntry<int> Y { get; private set; }
         public SettingEntry<int> Width { get; private set; }
         public SettingEntry<int> Height { get; private set; }
+        public SettingEntry<int> X { get; private set; }
+        public SettingEntry<int> Y { get; private set; }
         public SettingEntry<float> Scale { get; private set; }
         public ModuleSettings(PathingMapAlignPluginModule module, SettingCollection settings)
         {
             var min = -300;
             var max = 300;
-            X = settings.DefineSetting(nameof(X), 0, () => $"Mini Map X <{X.Value}>", () => "");
-            X.SetRange(min, max);
-            X.SettingChanged += OnSettingChanged;
-            Y = settings.DefineSetting(nameof(Y), 0, () => $"Mini Map Y <{Y.Value}>", () => "");
-            Y.SetRange(min, max);
-            Y.SettingChanged += OnSettingChanged;
             Width = settings.DefineSetting(nameof(Width), 0, () => $"Mini Map Width <{Width.Value}>", () => "");
             Width.SetRange(min, max);
             Width.SettingChanged += OnSettingChanged;
             Height = settings.DefineSetting(nameof(Height), 0, () => $"Mini Map Height <{Height.Value}>", () => "");
             Height.SetRange(min, max);
             Height.SettingChanged += OnSettingChanged;
+            X = settings.DefineSetting(nameof(X), 0, () => $"Mini Map X <{X.Value}>", () => "");
+            X.SetRange(min, max);
+            X.SettingChanged += OnSettingChanged;
+            Y = settings.DefineSetting(nameof(Y), 0, () => $"Mini Map Y <{Y.Value}>", () => "");
+            Y.SetRange(min, max);
+            Y.SettingChanged += OnSettingChanged;
             Scale = settings.DefineSetting(nameof(Scale), 1f, () => $"Marker Scale <{Math.Round(Scale.Value, 2)}>", () => "Keep adjusting until the far side markers are aligned.");
             Scale.SetRange(1f, 3f);
             Scale.SettingChanged += OnSettingChanged;
