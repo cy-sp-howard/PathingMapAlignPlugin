@@ -6,7 +6,6 @@ using Blish_HUD.Settings;
 using Microsoft.Xna.Framework;
 using System.ComponentModel.Composition;
 using System.Linq;
-using System.Runtime;
 
 namespace BhModule.PathingMapAlignPlugin
 {
@@ -31,7 +30,7 @@ namespace BhModule.PathingMapAlignPlugin
         }
         protected override void DefineSettings(SettingCollection settings)
         {
-            Settings = new ModuleSettings(this, settings);
+            Settings = new ModuleSettings(settings);
         }
         public override IView GetSettingsView()
         {

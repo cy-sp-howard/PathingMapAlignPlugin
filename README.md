@@ -1,5 +1,6 @@
 # Pathing Map Align Plugin - Blish HUD Module
-Align the Pathing with map manually.
+Align the Pathing with map manually.  
+Say goodbye to incomprehensible DPI calculation.
 
 Must be enabled after the Pathing module is enabled.
 ## Features
